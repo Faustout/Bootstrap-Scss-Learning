@@ -11979,6 +11979,16 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@keyframes pulse-border {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
 @media (max-width: 575.98px) {
   .btn-rounded {
     display: none;
@@ -12015,6 +12025,49 @@ textarea.form-control-lg {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+.display-2 {
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+.display-2.intro {
+  display: inline-block;
+  font-weight: 700;
+  color: #fff;
+}
+.display-2.description {
+  font-size: 1.5rem;
+  display: block;
+  color: #fff;
+  margin-top: 1.2rem;
+  text-transform: none;
+}
+@media (max-width: 575.98px) {
+  .display-2.description {
+    font-size: 1rem;
+    display: inline-block;
+  }
+}
+
+.heading-line::before {
+  content: "";
+  width: 10rem;
+  height: 0.1rem;
+  display: block;
+  margin: 0 auto;
+  background-color: #9926f0;
+}
+
+.heading-line::after {
+  content: "";
+  width: 2rem;
+  padding-top: 0.5rem;
+  height: 0.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  background-color: #9926f0;
+}
+
 .menu {
   background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
 }
@@ -12025,4 +12078,64 @@ textarea.form-control-lg {
   color: #fff !important;
   text-transform: capitalize;
   font-weight: 600;
+}
+
+.intro-section {
+  background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
+  padding: 10rem 0 0 0;
+  width: 100%;
+  height: 100%;
+}
+.intro-section .arrow-icon {
+  display: inline-flex;
+  align-items: center;
+  margin: 2px;
+  justify-content: center;
+}
+.intro-section .intros .video-box {
+  position: relative;
+  margin-left: 5rem;
+}
+.intro-section .intros .video-box a span i {
+  font-size: 6rem;
+  color: #d122e3;
+}
+
+.border-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6rem;
+  height: 6rem;
+  border: 0.55rem solid #fff !important;
+  border-radius: 50%;
+  animation: pulse-border 1.5s linear infinite;
+}
+.border-animation.border-1 {
+  animation-delay: 0.5s;
+}
+.border-animation.border-2 {
+  animation-delay: 1.5s;
+}
+
+.companies {
+  margin-bottom: 3rem;
+}
+.companies.logo-box {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0.2rem;
+}
+.companies.logo-box img {
+  height: 100%;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.companies.logo-box img:hover {
+  filter: grayscale(40%);
 }/*# sourceMappingURL=style.css.map */
